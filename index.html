@@ -1,12 +1,558 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>
-      witdcl, work harder!
-    </p>
-  </body>
+
+<head>
+
+<meta charset="utf-8">
+<title>健身计划</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">健身计划</h1>
+
+<blockquote>
+<h3 id="toc_1">一周双循环计划，一周五练，适用于强度不足的新手</h3>
+</blockquote>
+
+<h2 id="toc_2">第一天、第四天 胸部、背部、肱二头肌</h2>
+
+<blockquote>
+<h3 id="toc_3">胸部</h3>
+</blockquote>
+
+<h4 id="toc_4"><strong>杠铃卧推</strong></h4>
+
+<p><img src="http://image.yy.com/ojiastoreimage/6eb843ae03836792e1e52f64c8960e74.jpg" alt="杠铃卧推">
+<img src="http://image.yy.com/ojiastoreimage/012d87cfa976fcb59c6d19990abf25bf.jpg" alt="杠铃卧推">​</p>
+
+<h4 id="toc_5"><strong>上斜卧推</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/6eb843ae03836792e1e52f64c8960e74.jpg" alt="上斜卧推">
+<img src="http://image.yy.com/ojiastoreimage/012d87cfa976fcb59c6d19990abf25bf.jpg" alt="上斜卧推">​</p>
+
+<h4 id="toc_6">​<strong>下斜卧推</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/6eb843ae03836792e1e52f64c8960e74.jpg" alt="下斜卧推">
+<img src="http://image.yy.com/ojiastoreimage/012d87cfa976fcb59c6d19990abf25bf.jpg" alt="下斜卧推">​</p>
+
+<h4 id="toc_7"><strong>单臂平板仰卧飞鸟</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/6eb843ae03836792e1e52f64c8960e74.jpg" alt="单臂平板仰卧飞鸟">
+<img src="http://image.yy.com/ojiastoreimage/012d87cfa976fcb59c6d19990abf25bf.jpg" alt="单臂平板仰卧飞鸟">​</p>
+
+<blockquote>
+<h3 id="toc_8">背部</h3>
+
+<h3 id="toc_9">肱二头肌</h3>
+
+<ul>
+<li><strong>站姿肱二头肌绳索弯举</strong></li>
+<li><strong>反握绳索弯举</strong></li>
+</ul>
+</blockquote>
+
+<h2 id="toc_10">第二天、第五天 肩部、腿部，肱三头肌</h2>
+
+<blockquote>
+<h3 id="toc_11">肩部</h3>
+</blockquote>
+
+<h4 id="toc_12"><strong>直立哑铃交替推举</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/a0fce3d9a0b554fcd33a72c4758b0569.jpg" alt="直立哑铃交替推举">
+<img src="http://image.yy.com/ojiastoreimage/27ec9032193a63b6e89e4d2cafaf389d.jpg" alt="直立哑铃交替推举">​</p>
+
+<ul>
+<li>直立哑铃交替推举的动作要领
+
+<ol>
+<li>站立姿势，双手各持一只哑铃。将哑铃举到你的肩部位置，掌心彼此相对，肘部朝外。这是你的起始姿势。</li>
+<li>伸直一直手臂将哑铃向上推举，另一只手不动。不要倾斜，也不要借力挺举。</li>
+<li>短暂的停留片刻后，回到初始位置。</li>
+<li>换另一侧重复，交替双手做该动作。</li>
+</ol></li>
+</ul>
+
+<h4 id="toc_13"><strong>坐姿俯身后束提举</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/0f4e0bf60980a4b3856b4e2ee6e9bd4a.jpg" alt="坐姿俯身后束提举">
+<img src="http://image.yy.com/ojiastoreimage/6b4c4357cc7502ff61007ee738eeb096.jpg" alt="坐姿俯身后束提举">​</p>
+
+<ul>
+<li>坐姿俯身后束提举的动作要领
+
+<ol>
+<li>将一对哑铃放在一张平坦的长椅前方。</li>
+<li>坐在长椅末端，双脚并拢，哑铃在你的小腿后方。</li>
+<li>弯腰，但是后背挺直，将哑铃拿起来。这是你的初始姿势。</li>
+<li>保持你的躯干向前并且姿势不变，手肘略微弯曲，将哑铃提起在身体两侧，直到手臂与地面相平行。提起的时候同时呼气。 （注意： 避免晃动躯干或不经停顿直接将手臂落下）</li>
+<li>在到达顶点时停留片刻，缓慢的将哑铃回归初始位置。</li>
+<li>重复该动作至推荐次数。</li>
+<li>变化： 这项训练可以站着做，但如果你背部有问题，这个坐下的版本比较适合你。</li>
+</ol></li>
+</ul>
+
+<h4 id="toc_14"><strong>站姿侧平举</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/1467685986802_am__len45004.jpg" alt="站姿侧平举">
+<img src="http://image.yy.com/ojiastoreimage/1467685988671_am__len45959.jpg" alt="站姿侧平举">​</p>
+
+<ul>
+<li>站姿侧平举的动作要领
+
+<ol>
+<li>拿起一对哑铃，站直身体，将哑铃垂于你身体两侧，掌心朝向你自己。这是动作的起始位置。</li>
+<li>保持躯干稳固（不要晃动），将一侧的哑铃举起，肘部略微弯曲，手部倾斜做倒水状姿势。 继续向上提拉直到手臂和地面平行。 做这个动作时呼气，到达顶点时暂停片刻。<br></li>
+<li>将哑铃缓慢降回初始位置，同时吸气。<br></li>
+<li>重复该动作至推荐次数。<br></li>
+<li>变化： 这项训练还可以使用坐姿。</li>
+</ol></li>
+</ul>
+
+<h4 id="toc_15"><strong>绳索面拉</strong></h4>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/955a3f41e5ccf8a33c137fb8f8720a20.jpg" alt="绳索面拉">
+<img src="http://image.yy.com/ojiastoreimage/8632b71dd8b4762db51f7a38a4b0a395.jpg" alt="绳索面拉">​</p>
+
+<ul>
+<li>绳索面拉的动作要领
+
+<ol>
+<li>面对一个高位滑轮，使用绳索或者两个把手拉住它，将其向你的脸部方向拉动，拉的时候将两手分开。保持上臂与地面平行。</li>
+</ol></li>
+</ul>
+
+<blockquote>
+<h3 id="toc_16">腿部</h3>
+
+<ul>
+<li><strong>杠铃深蹲</strong></li>
+</ul>
+</blockquote>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/fceeb63df6c76f9e4acc33d783e52656.jpg" alt="杠铃深蹲">
+<img src="http://image.yy.com/ojiastoreimage/f8ed32e2a95aa53179dcd73f71329d04.jpg" alt="杠铃深蹲">​</p>
+
+<div><pre><code class="language-none">杠铃深蹲的动作要领
+1. 开始时，将杠铃置于斜方肌顶端。胸部挺起，头部朝向正前方。两脚开立，与胯同宽，双脚指向外侧。
+2. 弯曲双膝降低身体，有节制的尽可能的向后推髋。这需要双膝向前移动。确保双膝与双脚呈一条直线。尽可能的保持躯干直立。
+3. 继续降低身体，保持重量集中于脚跟前部。当大腿与小腿相触时，反向运动，将杠铃向上运动。</code></pre></div>
+
+<ul>
+<li><strong>罗马尼亚硬拉</strong></li>
+</ul>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/ec2d575e1bf80eb83bdd675149d1faab.jpg" alt="罗马尼亚硬拉">
+<img src="http://image.yy.com/ojiastoreimage/0e285f306fc887772f1949e35684d18d.jpg" alt="罗马尼亚硬拉">​</p>
+
+<div><pre><code class="language-none">罗马尼亚硬拉的动作要领
+1. 杠铃位于臀部高度，正握（手掌向下）杠铃。双肩向后，背部拱起，双膝轻微弯曲。这是动作的起始位置。
+2. 放低杠铃，尽可能向后推髋。保持杠铃接近身体，头部看向前方，双肩向后。正确的完成，你会达到膝盖以下腘绳肌的柔韧性的最大极限。在这项练习中，不要过度动作。
+3. 在这组动作的末尾，回到起始姿势，向前推髋，身体站直。</code></pre></div>
+
+<ul>
+<li><strong>杠铃弓箭步</strong></li>
+</ul>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/97d019620e30da7ec03807381702cdd6.jpg" alt="杠铃弓箭步">
+<img src="http://image.yy.com/ojiastoreimage/74cc704f38ebad52395b19de1e2cc6ed.jpg" alt="杠铃弓箭步">​</p>
+
+<div><pre><code class="language-none">杠铃弓箭步的动作要领
+1. 出于安全方面的考量，此项练习最好在深蹲架中完成。开始时，将架上的杠铃放在肩部以下位置。一旦正确的高度被选定，杠铃装载好，走到杠铃下，将杠铃横跨于你的肩部后侧（微微低于颈部）。
+2. 用双臂撑起杠铃，将杠铃抬离架子，双腿发力，同时挺直躯干。
+3. 离开架子，右腿向前迈出，臀部下降做深蹲，保持躯干挺直，保持身体平衡。在降低身体的同时吸气。注释：当你下蹲时，不要使你的膝盖向前超过了脚趾，否则会给你的膝盖施加过多的压力。
+4. 主要用脚跟发力，将身体上升回到起始姿势，在这个过程中呼气。
+5. 重复动作至推荐的重复次数，然后换左腿重复以上动作。
+6. 一种方法是交替使用两条腿。例如用右腿做一次重复，然后换左腿，然后再换右腿，以此重复。
+7. 另一种方法被称为静态弓箭步，起始姿势就是一只脚在前。在这种情况下，你只需在这个起始姿势的基础上向上走或向下走，直到重复动作至推荐的重复次数。然后换另一条腿重复以上动作。
+8. 更具挑战性的版本是行走弓箭步，在行走弓箭步训练中，你需要以弓箭步的动作在室内行走。在一个弓箭步动作的末尾后腿需要迈向前，以便于身体继续向前移动。这个版本适用于最高级的练习者。
+注意：在这个练习中需要很强的平衡力，所以如果身体平衡力不好的话，可以放弃这项练习，或者只用自己的体重，依靠固定的物体保持平衡。绝对不要在平衡力不好的情况下将杠铃置于肩上。</code></pre></div>
+
+<blockquote>
+<h3 id="toc_17">肱三头肌</h3>
+
+<ul>
+<li><strong>绳索过顶肱三头肌屈伸</strong></li>
+</ul>
+</blockquote>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/d79760377028dee19dd3c57e6b12a202.jpg" alt="绳索过顶肱三头肌屈伸">
+<img src="http://image.yy.com/ojiastoreimage/6b6e0a095f7d9b430b920eb73f1e8367.jpg" alt="绳索过顶肱三头肌屈伸">​</p>
+
+<div><pre><code class="language-none">绳索过顶肱三头肌屈伸的动作要领
+1. 把绳索连接到低位滑轮上。
+2. 双手中立握姿（掌心相对）紧握绳索，伸直手臂高于头部。你的肘部应该靠近头部和手臂应垂直于地板，指节对准天花板。这是动作的起始位置。
+3. 上臂保持静止，慢慢在头后部将绳索降低并吸气。当三头肌被充分拉伸时，停顿一下。
+4. 收缩肱三头肌回到起始位置并呼气。
+5. 重复动作至推荐的重复次数。
+变化：你还可以坐在有靠背长凳上，或者你可以用哑铃代替绳索。</code></pre></div>
+
+<ul>
+<li><strong>反握肱三头肌下压</strong></li>
+</ul>
+
+<p>​<img src="http://image.yy.com/ojiastoreimage/d73de3610294779c080a905031b72cee.jpg" alt="反握肱三头肌下压">
+<img src="http://image.yy.com/ojiastoreimage/49df92a66233885590f800a4c349df79.jpg" alt="反握肱三头肌下压">​</p>
+
+<div><pre><code class="language-none">反握肱三头肌下压的动作要领
+1. 首先，将杆（直杆或曲杆）连接到在一个高位滑轮器械上。
+2. 面对滑轮器械，手掌朝上抓住杆（反握），握距与肩同宽。用你的背阔肌将杆拉下来，直到你的手臂在身体两侧完全伸展。提示：肘部应该在你身体的两侧，你的脚应该是彼此分开与肩同宽。这是动作的起始位置。
+3. 缓慢将杆抬高到与胸部对齐的位置并吸气。只有前臂移动，肘部和上臂全程保持固定。
+4. 然后用力收缩肱三头肌将杆下压到起始位置并呼气。
+5. 重复动作至推荐的重复次数。
+变化：你也可以使用单手手柄进行单侧的训练，这会让你更好地隔离肱三头肌。在此情形下，你可以使用另一只手对负重手臂的前臂施加压力来帮助其完成更多的重复次数。</code></pre></div>
+
+<h2 id="toc_18">第三天 腹部、下背部、大腿后部、前臂</h2>
+
+<blockquote>
+<h3 id="toc_19">腹部</h3>
+
+<ul>
+<li><strong>下斜卷腹</strong></li>
+<li><strong>绳索前推</strong></li>
+<li><strong>器械卷腹</strong></li>
+<li><strong>负重俄罗斯转体</strong></li>
+</ul>
+
+<h3 id="toc_20">下背部</h3>
+
+<ul>
+<li><strong>山羊挺身</strong></li>
+</ul>
+
+<h3 id="toc_21">大腿后部</h3>
+
+<ul>
+<li><strong>罗马尼亚硬拉</strong></li>
+<li><strong>俯卧腿弯举</strong></li>
+</ul>
+
+<h3 id="toc_22">前臂</h3>
+
+<ul>
+<li><strong>坐姿双手反握低位杠铃手腕弯举</strong></li>
+<li><strong>农夫行走</strong></li>
+</ul>
+
+<h3 id="toc_23">小腿</h3>
+
+<ul>
+<li><strong>站姿哑铃提踵</strong></li>
+</ul>
+</blockquote>
+
+<div><pre><code class="language-none">周一、周五休息
+周二、周六胸背二头
+周三、周日肩腿三头
+周四腹和其他</code></pre></div>
+
+
+
+
+</body>
+
 </html>
